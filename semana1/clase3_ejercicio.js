@@ -8,15 +8,39 @@ async function main() {
   const dia = Number(await ask("Ingresa un número del 1 al 7:"));
   const diasSemana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
 
-  // TODO : Implementar la lógica para mostrar el día de la semana según el número ingresado
-  // Ejemplo: Si el usuario ingresa 1, debe mostrar "Lunes"
-
   if (dia >= 1 && dia <= 7) {
     console.log(diasSemana[dia - 1]);
+  } else {
+    console.log("No es un número válido");
   }
-  else {
-    console.log("Numero no válido");
+
+  switch (dia) {
+    case 1:
+      console.log(diasSemana[0]);
+      break;
+    case 2:
+      console.log(diasSemana[1]);
+      break;
+    case 3:
+      console.log(diasSemana[2]);
+      break;
+    case 4:
+      console.log(diasSemana[3]);
+      break;
+    case 5:
+      console.log(diasSemana[4]);
+      break;
+    case 6:
+      console.log(diasSemana[5]);
+      break;
+    case 7:
+      console.log(diasSemana[6]);
+      break;
+    default:
+      console.log("No es un número válido");
+      break;
   }
+
 }
 
 main();
